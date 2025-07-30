@@ -8,7 +8,7 @@ public class LaughCircuitApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(LaughCircuitApplication.class, args);
-		System.out.println("hello world");
+		System.out.println("App Running");
 	}
 
 }

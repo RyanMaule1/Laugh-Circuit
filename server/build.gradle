@@ -5,7 +5,7 @@ plugins {
 }
 
 
-group = 'com.laughcircuit'
+group = 'com.server'
 version = '0.0.1-SNAPSHOT'
 
 java {
