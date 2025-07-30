@@ -1,5 +1,5 @@
 // File: SecurityConfig.java
-package com.laughcircuit.laugh_circuit;
+package com.laughcircuit.laugh_circuit.configs;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
