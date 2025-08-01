@@ -1,37 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
-import { useEffect } from 'react';
+import RoleSelector from "./Components/RoleSelector";
+import Header from "./Components/Header";
+import { useState } from "react";
+import ComedianHomePage from "./Pages/PerformerHomePage";
+import VenueHomePage from "./Pages/VenueHomePage";
 
 function App() {
 
-  useEffect(() => {
 
-    const fetchData = async() => {
-        const data = await fetch("http://localhost:8080/")
-        const json = await data.json()
-        console.log(json)
-    }
-
-    fetchData()
-    
-  }, [])
+  //this will have to be extracted to a global state
+  const [performerView, setPerformerView] = useState(true)
+  
 
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header/>
+      {performerView ? 
+      <ComedianHomePage 
+      performerView={performerView} 
+      setPerformerView={setPerformerView}
+      /> : 
+      <VenueHomePage 
+      performerView={performerView}
+      setPerformerView={setPerformerView}
+      />}
     </div>
   );
 }
