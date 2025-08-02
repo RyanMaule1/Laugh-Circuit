@@ -7,8 +7,9 @@ import VenueHomePage from "./Pages/VenueHomePage";
 function App() {
 
 
-  //this will have to be extracted to a global state
+  //Extract to GlobalContext
   const [performerView, setPerformerView] = useState(true)
+  const [loggedIn, setLoggedIn] = useState(false)
   
 
   return (
