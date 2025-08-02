@@ -8,28 +8,31 @@ import JoinNowComponent from '../Components/JoinNowComponent'
 
 const VenueHomePage = ({performerView, setPerformerView}) => {
   return (
-    <div className="bg-[#121212] text-[#E0E0E0] min-h-screen">
-    
-        {/* Hero / Intro */}
-        <section className="py-10 text-center border-b border-[#2A2A2A]">
-        <h2 className="text-3xl font-bold text-[#6C63FF] mb-2">Welcome, Agent</h2>
-        <p className="text-[#9E9E9E]">Find Talent, Sell Out Shows, and Grow Your Community.</p>
-        </section>
+    <div className="bg-gray-100 text-[#2A2A2A] min-h-screen">
+    {/* Page Wrapper */}
+      <div className="w-full max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-20 py-10">
 
-        {/* Role Selector - Optional */}
-        <div className="my-6">
-            <RoleSelector performerView={performerView} setPerformerView={setPerformerView}/>
+        {/* Hero / Join */}
+        <JoinNowComponent performerView={performerView} setPerformerView={setPerformerView} />
+
+        {/* Sections in card-style alternating layout */}
+        <div className="bg-white rounded-xl shadow-sm p-6">
+          <PostOpenMicComponent />
         </div>
 
-        {/* Sections */}
-        <JoinNowComponent />
-        <PostOpenMicComponent />
-        <PostPaidGigsComponent/>
-        <FindTalentComponent/>
-        <PostContentComponent />
-        
+        <div className="bg-[#f9f9f9] rounded-xl shadow-sm p-6">
+          <PostPaidGigsComponent />
+        </div>
 
+        <div className="bg-white rounded-xl shadow-sm p-6">
+          <FindTalentComponent />
+        </div>
 
+        <div className="bg-[#f9f9f9] rounded-xl shadow-sm p-6 mb-20">
+          <PostContentComponent />
+        </div>
+
+      </div>
     </div>
   )
 }

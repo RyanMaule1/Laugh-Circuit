@@ -11,7 +11,7 @@ const JoinNowComponent = ({performerView, setPerformerView}) => {
       <section className="w-full max-w-3xl text-center mb-10 border-b border-[#2A2A2A] pb-6">
         <h2 className="text-3xl font-bold text-[#6C63FF] mb-2">Welcome, Performer</h2>
         <p className="text-[#9E9E9E]">
-          Grow your career, get booked, and connect with the comedy world.
+          {performerView ? `Grow your career, get booked, and connect with the comedy world.` : "Find Talent, Grow Your Brand, Explore New Opportunities"}
         </p>
       </section>
 
